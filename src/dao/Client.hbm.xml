@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Client" table="CLIENT" >
+	<id name="id_client" column="ID_CLIENT"  >
+		<generator class="native"></generator>
+	</id>
+	<property name="nom_client" column="NOM_CLIENT"></property>
+	<property name="email_client" column="EMAIL_CLIENT"></property>
+	<property name="password" column="PASSWORD"></property>
+	<property name="adresse_client" column="ADRESSE_CLIENT"></property>
+	<property name="idrole" column="IDROLE"></property>
+</class>
+
+</hibernate-mapping>

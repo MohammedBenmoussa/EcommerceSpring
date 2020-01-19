@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Categorie" table="CATEGORIE" >
+	<id name="id_cat" column="ID_CAT"  >
+		<generator class="native"></generator>
+	</id>
+	<property name="nom_cat" column="NOM_CAT"></property>
+	<property name="description_cat" column="DESCRIPTION_CAT"></property>
+	<property name="image_cat" column="IMAGE_CAT"></property>
+</class>
+
+</hibernate-mapping>

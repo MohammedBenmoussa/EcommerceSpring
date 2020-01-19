@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Detail_Produit" table="DETAIL_PRODUIT" >
+	<id name="id_detail_produit" column="ID_DETAIL_PRODUIT"  >
+		<generator class="native"></generator>
+	</id>
+	<property name="id_prod" column="ID_PROD"></property>
+	<property name="designation" column="DESIGNATION"></property>
+	<property name="prix" column="PRIX"></property>
+	<property name="quantite_produit" column="QUANTITE_PRODUIT"></property>
+	<property name="image" column="IMAGE"></property>
+	<property name="description" column="DESCRIPTION"></property>
+	<property name="qte_demander" column="QTE_DEMANDER"></property>
+</class>
+
+</hibernate-mapping>

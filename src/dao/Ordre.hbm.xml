@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Ordre" table="ORDRE" >
+	<id name="id_ord" column="ID_ORD" >
+		<generator class="native"></generator>
+	</id>
+	<property name="id_client_ord" column="ID_CLIENT_ORD"></property>
+	<property name="date_ord" column="DATE_ORD"></property>
+	<property name="status_ord" column="STATUT_ORD"></property>
+	</class>
+
+</hibernate-mapping>

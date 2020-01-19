@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/tx
+              http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+              http://www.springframework.org/schema/context
+              http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+<bean class="dao.ClientImplDataBase" id="objetDAOClient" ></bean>
+<bean class="services.ClientImplService" id="objetServiceClient">
+	<property name="dao" ref="objetDAOClient" ></property> 
+</bean>
+
+<bean class="dao.CategorieImplDataBase" id="objetDAOCategorie" ></bean>
+<bean class="services.CategorieImplService" id="objetServiceCategorie">
+	<property name="dao" ref="objetDAOCategorie" ></property> 
+</bean>
+<bean class="dao.ProduitImplDataBase" id="objetDAOProduit" ></bean>
+<bean class="services.ProduitImplService" id="objetServiceProduit">
+	<property name="dao" ref="objetDAOProduit" ></property> 
+</bean>
+<bean class="dao.Detail_ProduitImplDataBase" id="objetDAODetail_Produit" ></bean>
+<bean class="services.Detail_ProduitImplService" id="objetServiceDetail_Produit">
+	<property name="dao" ref="objetDAODetail_Produit" ></property> 
+</bean>
+<bean class="dao.OrdreImplDataBase" id="objetDAOOrdre" ></bean>
+<bean class="services.OrdreImplService" id="objetServiceOrdre">
+	<property name="dao" ref="objetDAOOrdre" ></property> 
+</bean>
+<bean class="dao.Detail_OrdreImplDataBase" id="objetDAOOrdreDetail" ></bean>
+<bean class="services.Detail_OrdreImplService" id="objetServiceOrdreDetail">
+	<property name="dao" ref="objetDAOOrdreDetail" ></property> 
+</bean>
+</beans>              

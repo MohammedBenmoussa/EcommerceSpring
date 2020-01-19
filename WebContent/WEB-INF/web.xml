@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ECommerce</display-name>
+  
+  
+  <listener>
+<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>	
+  
+  <context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/spring-beans.xml</param-value>
+</context-param>
+  
+  
+  <servlet>
+	<servlet-name>action</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<init-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>/WEB-INF/application-servlet-config.xml</param-value>
+</init-param>
+
+</servlet>	
+  
+  <servlet-mapping>
+<servlet-name>action</servlet-name>
+<url-pattern>*.aspx</url-pattern>
+</servlet-mapping>
+<!-- Paypal configuration -->
+  <context-param>
+	<param-name>authtoken</param-name>
+	<param-value>tGRIfOz4lEkiOhb-QndXjjiT5xcvElqPyQyMR2jl0Fm_q3Kc7j-57-bXy7y</param-value>
+</context-param>
+
+<context-param>
+	<param-name>posturl</param-name>
+	<param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
+</context-param>
+
+<context-param>
+	<param-name>business</param-name>
+	<param-value>sebaouiyoussef1977@gmail.com</param-value>
+</context-param>
+
+<context-param>
+	<param-name>returnurl</param-name>
+	<param-value>http://localhost:8080/projetecom/succes.jsp</param-value>
+</context-param>
+
+<context-param>
+	<param-name>cancelurl</param-name>
+	<param-value>http://localhost:8080/projetecom/echec.jsp</param-value>
+</context-param>
+<!-- Fin configuration paypal -->
+
+  <welcome-file-list>
+    <welcome-file>index.aspx</welcome-file>
+
+  </welcome-file-list>
+</web-app>

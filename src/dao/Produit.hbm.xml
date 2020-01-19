@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Produit" table="PRODUIT" >
+	<id name="id_prod" column="ID_PROD"  >
+		<generator class="native"></generator>
+	</id>
+	<property name="id_prod_cat" column="ID_PROD_CAT"></property>
+	<property name="prod_status" column="PROD_STATUTS"></property>
+</class>
+
+</hibernate-mapping>

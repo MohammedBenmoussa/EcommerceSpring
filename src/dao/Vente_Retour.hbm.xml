@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+<class name="dao.Vente_Retour" table="VENTE_RETOUR" >
+	<id name="id_retour" column="ID_RETOUR"  >
+		<generator class="native"></generator>
+	</id>
+	<property name="id_retour_vente" column="ID_RETOUR_VENTE"></property>
+	<property name="id_prod" column="ID_PRODUIT"></property>
+	<property name="qte_retour" column="QTE_RETOUR"></property>
+	<property name="date_retour" column="DATE_RETOUR"></property>
+	<property name="cause_retour" column="CAUSE_RETOUR"></property>
+</class>
+
+</hibernate-mapping>
